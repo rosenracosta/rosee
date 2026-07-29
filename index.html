@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+  body {
+    text-align: center; /* Centraliza tudo (imagem, botões e texto) */
+    font-family: sans-serif; /* Tira aquela fonte com cara de 'Windows 95' */
+    margin-top: 50px; /* Dá um respiro do topo da tela */
+  }
+
+  button {
+    padding: 10px 20px; /* Deixa o botão maior e fácil de clicar */
+    cursor: pointer; /* Faz o ponteiro do mouse virar a "mãozinha" */
+  }
+</style>
+
+
 </head>
 <body>
-  <!-- Nossa imagem que vai mudar -->
-<img id="minhaImagem" src="apagada.png" width="200">
+   <!-- Nossa imagem que vai mudar -->
+<img id="minhaImagem" src="pic_bulbon.gif" width="200">
 
 <!-- O botão que aciona a ação -->
 <button onclick="ligar()">Ligar</button>
@@ -15,8 +29,20 @@
 
 <!-- Onde o JavaScript vai morar -->
 <script>
-    // A lógica vai entrar aqui!
+  // Função para ligar
+function ligar() {
+    // 1. O documento (página)
+    // 2. Pega o elemento pelo ID ('minhaImagem')
+    // 3. Muda a fonte (src) para a imagem acesa
+    document.getElementById('minhaImagem').src = 'acesa.png';
+}
+
+// Função para desligar
+function desligar() {
+    document.getElementById('minhaImagem').src = 'pic_bulboff.gif';
+}
+  // A lógica vai entrar aqui!
 </script>
-  
+ 
 </body>
 </html>
