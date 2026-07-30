@@ -26,6 +26,7 @@
 <!-- O botão que aciona a ação -->
 <button onclick="ligar()">Ligar</button>
 <button onclick="desligar()">Desligar</button>
+<button onclick="testeClique()">Sair</button>
 
 <!-- Onde o JavaScript vai morar -->
 <script>
@@ -34,14 +35,16 @@ function ligar() {
     // 1. O documento (página)
     // 2. Pega o elemento pelo ID ('minhaImagem')
     // 3. Muda a fonte (src) para a imagem acesa
-    document.getElementById('minhaImagem').src = 'acesa.png';
+    document.getElementById('minhaImagem').src = 'pic_bulbon.gif';
 }
 
 // Função para desligar
 function desligar() {
     document.getElementById('minhaImagem').src = 'pic_bulboff.gif';
 }
-  // A lógica vai entrar aqui!
+ function testeClique() {
+  alert("A lâmpada foi ligada!");
+} // A lógica vai entrar aqui!
 </script>
  
 </body>
