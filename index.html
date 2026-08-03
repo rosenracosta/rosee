@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-  body {
-    text-align: center; /* Centraliza tudo (imagem, botões e texto) */
-    font-family: sans-serif; /* Tira aquela fonte com cara de 'Windows 95' */
-    margin-top: 50px; /* Dá um respiro do topo da tela */
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      margin-top: 50px;
+    }
 
-  button {
-    padding: 10px 20px; /* Deixa o botão maior e fácil de clicar */
-    cursor: pointer; /* Faz o ponteiro do mouse virar a "mãozinha" */
-  }
-</style>
-
-
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
-   <!-- Nossa imagem que vai mudar -->
-<img id="minhaImagem" src="pic_bulbon.gif" width="200">
+  <img id="minhaImagem" src="pic_bulboff.gif" width="200">
 
-<!-- O botão que aciona a ação -->
-<button onclick="ligar()">Ligar</button>
-<button onclick="desligar()">Desligar</button>
-<button onclick="testeClique()">Sair</button>
+  <button onclick="alternarLampada()">Ligar/Desligar</button>
 
-<!-- Onde o JavaScript vai morar -->
-<script>
-  // Função para ligar
-function ligar() {
-    // 1. O documento (página)
-    // 2. Pega o elemento pelo ID ('minhaImagem')
-    // 3. Muda a fonte (src) para a imagem acesa
-    document.getElementById('minhaImagem').src = 'pic_bulbon.gif';
-}
+  <script>
+    let lampadaLigada = false;
 
-// Função para desligar
-function desligar() {
-    document.getElementById('minhaImagem').src = 'pic_bulboff.gif';
-}
- function testeClique() {
-  alert("A lâmpada foi ligada!");
-} // A lógica vai entrar aqui!
-</script>
- 
+    function alternarLampada() {
+      lampadaLigada = !lampadaLigada;a
+
+      if (lampadaLigada) {
+        document.getElementById('minhaImagem').src = 'pic_bulbon.gif';
+      } else {
+        document.getElementById('minhaImagem').src = 'pic_bulboff.gif';
+      }
+    }
+  </script>
+
 </body>
+
 </html>
